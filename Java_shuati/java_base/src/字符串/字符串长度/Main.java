@@ -1,0 +1,11 @@
+package 字符串.字符串长度;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        System.out.println(str.length());
+    }
+}
