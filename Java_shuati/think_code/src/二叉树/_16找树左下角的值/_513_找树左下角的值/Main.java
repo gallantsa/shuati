@@ -58,18 +58,21 @@ class Solution {
 
     private void traversal(TreeNode root, int depth) {
         if (root.left == null && root.right == null) {
+            /*这里保证能找到左下角的值*/
             if (depth > max_Depth) {
                 max_Depth = depth;
                 result = root.val;
             }
         }
 
+        /*左*/
         if (root.left != null) {
             depth++;
             traversal(root.left, depth);
             depth--;
         }
 
+        /*右*/
         if (root.right != null) {
             depth++;
             traversal(root.right, depth);
