@@ -29,6 +29,10 @@ class Solution {
         }
         // for控制层数
         // 剪枝
+        // 已经选择的元素个数：path.size();
+        // 所需需要的元素个数为: k - path.size();
+        // 列表中剩余元素（n-i） >= 所需需要的元素个数（k - path.size()）
+        // 在集合n中至多要从该起始位置 : i <= n - (k - path.size()) + 1，开始遍历
         for (int j = startIndex; j <= n - (k - path.size()) + 1; j++) {
             path.add(j);
             backtracking(n, k, j + 1);
