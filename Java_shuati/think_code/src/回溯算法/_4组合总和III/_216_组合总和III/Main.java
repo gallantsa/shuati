@@ -17,11 +17,13 @@ class Solution {
     }
 
     // 未剪枝版
+    // k 控制树的深度
     private void backTracking(int targetSum, int k, int sum, int startIndex) {
         if (path.size() == k)
             if (targetSum == sum)
                 result.add(new ArrayList<>(path));
 
+        // startIndex控制树的宽度
         for (int i = startIndex; i <= 9; i++) {
             sum += i;
             path.push(i);
