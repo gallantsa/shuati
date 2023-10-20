@@ -9,6 +9,8 @@ class Solution {
     // 1. 上下坡有平坡
     // 2. 首尾元素 默认前面有一个元素
     // 3. 单调有平坡
+    // 局部最优解: 当前差值和上一个差值异号, 则计数加一
+    // 全局最优解: 计数的最大值
     public int wiggleMaxLength(int[] nums) {
         if (nums.length == 1) return 1;
         int prediff = 0;
