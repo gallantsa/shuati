@@ -6,6 +6,8 @@ public class Main {
 }
 
 class Solution {
+    // 单调栈
+    // 横向求解
     public int trap(int[] height) {
         int len = height.length;
 
@@ -25,7 +27,7 @@ class Solution {
                 int l = stack.peek();
                 int r = i;
                 int h = Math.min(height[l], height[r]) - height[cur];
-                res += (r - l - 1) * h;
+                res += (r - l - 1) * h; // (r - l - 1) 表示的是宽度
             }
             stack.push(i);
         }
